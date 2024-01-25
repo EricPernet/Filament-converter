@@ -57,6 +57,8 @@ Eine vollständige Dokumentation der Arbeitsschritte und ein Fazit von unserem p
 
 **Nozzle:** https://de.aliexpress.com/item/1005005772823867.html?spm=a2g0o.productlist.main.1.46412130rM69h8&algo_pvid=9fbe4379-e494-4034-8c4c-f0dfec1b8216&algo_exp_id=9fbe4379-e494-4034-8c4c-f0dfec1b8216-0&pdp_npi=4%40dis%21CHF%213.60%210.44%21%21%2128.87%21%21%402103011217001396470721642e0df6%2112000034367533471%21sea%21CH%210%21AB&curPageLogUid=m0TIKRMCpsHY
 
+**Digital Display:** https://store.arduino.cc/collections/displays/products/grove-4-digit-display
+
 
 ## Weitere Tutorials und Anleitungen zu verschiedenen Teilen des Projekts
 
