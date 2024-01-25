@@ -3,6 +3,7 @@ Informatik Projekt Eric Pernet, Efraim Sander
 
 
 Dies ist das Abschlussprojekt im Grundlagenfach Informatik der Kantonsschule Kreuzlingen von Eric und Efraim (Herbstsemester 2023). Dieses Projekt beinhaltet den OpenSCAD Code für die Vorrichtung der Spule, wie auch das komplette Arduino-Skript (C++), welches komplett funktionsfähig ist. 
+Die Codes und Dokumentation sind vollständig von uns, ansonsten sind die Quellen verlinkt. Bei Fragen und anregungen bitte eric.pernet@ksk.ch oder efraim.sander@ksk.ch kontaktieren. 
 
 ## Informationen zum Projekt
 
