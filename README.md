@@ -31,5 +31,9 @@ Unten folgt ein Bild mit einer Legende für die Ausführung des Projekts von Efr
 **9. Breadboard:** Das Breadboard enthält die vollständige Elektronik, dieses ist jedoch nur temporär da und wird noch durch eine Platine ausgetauscht.
 
 
+//WICHTIG: Das Projekt auf dem Bild stellt nur unsere Ausführung dar für ein Informatikprojekt mit relativ wenig verfügbarer Zeit und Ressourcen. Das Projekt kann auch noch stetig verbessert werden und Ansätze zur Lösung von Problemen könnten auch anders sein.//
+
+
+
 
 
