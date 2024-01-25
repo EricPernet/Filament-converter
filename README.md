@@ -48,7 +48,7 @@ https://www.arduino.cc/reference/en/libraries/ht16k33/
 
 ## Dokumentation zum Projekt
 
-Eine vollständige Dokumentation der Arbeitsschritte und ein Fazit von unserem persönlichen Projekt ist in diesem PDF Dokument enthalten: file:///C:/Users/eric/Downloads/diy_pet_flaschen_zu_filament_converter_efraim_und_eric.pdf
+Eine vollständige Dokumentation der Arbeitsschritte und ein Fazit von unserem persönlichen Projekt ist in diesem PDF Dokument enthalten: https://github.com/EricPernet/Filament-converter/blob/main/diy_pet_flaschen_zu_filament_converter_efraim_und_eric.pdf
 
 
 ## Teile, die im Projekt enthalten sind
