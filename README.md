@@ -10,4 +10,7 @@ Das Ziel des Filament-converters ist es, geschnittene PET-Flaschen Streifen durc
 
 Unten folgt ein Bild mit einer Legende für die Ausführung des Projekts von Efraim und mir. Das Setup könnte auch beliebig geändert werden. 
 
+![FIlamentmaker](https://github.com/EricPernet/Filament-converter/assets/142325259/c59eba51-0d83-4b5b-847e-01949284855a)
+
+
 
