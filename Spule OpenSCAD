@@ -11,8 +11,8 @@ $fn = 50;
 Breite = 100; //Breite der Spule
 ZahnzahlSpule = 100; //Zahnzahl der Spule
 BreiteZR = 10; //Breite des Zahnrads
-Loch = 9.1; //Loch für das Gewinde bei der Spule
-Loch2 = 9.1; //Loch für das lange Zahnrad
+Loch = 5; //Loch für das Gewinde bei der Spule
+Loch2 = 5; //Loch für das lange Zahnrad
 
 //Verschiebung der Spule:
 x1 = 0;
@@ -78,7 +78,7 @@ cube([BreiteSeitenwand,LaengeSeitenwand,HoeheSeitenwand]);
 #cylinder(200,Loch/2,Loch/2);
     translate([-50,-(y2+Breite-13),-25])
     rotate([0,90,0])
-    #cylinder(200,Loch/2, Loch/2);
+    #cylinder(200,Loch/4, Loch/4);
 }
  
  //Seitenwand 1 Fuss
@@ -98,10 +98,10 @@ translate([Breite+20,-90,-60])
 cube([BreiteSeitenwand,LaengeSeitenwand,HoeheSeitenwand]);
     translate([-50,0,0])
     rotate([0,90,0])
-#cylinder(200,Loch/2,Loch/2);
+#cylinder(100,Loch/2,Loch/2);
     translate([-50,-(y2+Breite-13),-25])
     rotate([0,90,0])
-    #cylinder(200,Loch/2, Loch/2);
+    #cylinder(200,Loch/4, Loch/4);
 }
  
  //Seitenwand 2 Fuss
