@@ -4,7 +4,7 @@ Informatik Projekt Eric Pernet, Efraim Sander
 
 Dies ist das Abschlussprojekt im Grundlagenfach Informatik der Kantonsschule Kreuzlingen von Eric und Efraim (Herbstsemester 2023). Dieses Projekt beinhaltet den OpenSCAD Code für die Vorrichtung der Spule, wie auch das komplette Arduino-Skript (C++), welches komplett funktionsfähig ist. 
 
-**Informationen zum Projekt**
+===Informationen zum Projekt===
 
 Das Ziel des Filament-converters ist es, geschnittene PET-Flaschen Streifen durch einen Heizblock zu ziehen um dadurch Filament herzustellen, welches in einen üblichen 3D Drucker eingeführt werden kann. 
 
@@ -29,4 +29,7 @@ Unten folgt ein Bild mit einer Legende für die Ausführung des Projekts von Efr
 **8. Display:** Das Display Zeigt den gemessenen Widerstand vom Temperaturmesser an, welcher in den Heatblock (2) integriert ist. Aktuell wird jedoch erst ein Widerstands-Wert angezeigt, dies muss noch mit der richtigen Temperatur gewechselt werden.
 
 **9. Breadboard:** Das Breadboard enthält die vollständige Elektronik, dieses ist jedoch nur temporär da und wird noch durch eine Platine ausgetauscht.
+
+
+
 
