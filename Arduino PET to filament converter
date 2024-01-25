@@ -7,76 +7,97 @@
  *    Author:      Eric Pernet, Efraim Sander 
  * =====================================================================================
  */
- 
- 
+
+
 /*
   library für HT16K33 I2C 4x7segment display
   Author:   Rob Tillaart
   Betreuer: Rob Tillaart
   https://www.arduino.cc/reference/en/libraries/ht16k33/
+
+  library für Stepper motor
+  https://www.arduino.cc/reference/en/libraries/stepper/
  */
 #include "HT16K33.h"
- 
+#include "Stepper.h"
+
 HT16K33 seg(0x70);//I2C Schnittstelle
- 
-int tempSens = A3;//Temperatursensor (über Pull-down Wiederstand angeschlossen)
-int tempControl = 6;//kontrolliert über Mosfet die Temperatur
-int temp;//Wert des Temperatursensors (nicht echte Temperatur)
-int maxTemp = 1000;//temp-Wert, ab welchem nicht weiter geheizt wird
- 
-int pwmPin = 3;//steuert Spannung für Motor
-int directionPin = 12;//steuert Motorenrichtung
-int speed;//Motorgeschwindigkeit
-int minTemp = 700;//Mindestwert von temp, ab dem der Motor läuft
- 
+
+const int tempSens = A3;//Temperatursensor (über Pull-down Wiederstand angeschlossen)
+const int tempControl = 6;//kontrolliert über Mosfet die Temperatur
+const int maxTemp = 1000;//temp-Wert, ab welchem nicht weiter geheizt wird
+
+unsigned long previousMillis;
+const long refreshRate = 300;//refreshrate für das Display in Milisekunden
+
+const int stepsPerRevolution = 200;//Steppermotor-Schritte / Umdrehung
+
+//Pins für den Stepper Motor
+const int pwmA = 3;
+const int pwmB = 11;
+const int brakeA = 9;
+const int brakeB = 8;
+const int dirA = 12;
+const int dirB = 13;
+
+//initialisiert die Stepper library auf das motorshield
+Stepper myStepper = Stepper(stepsPerRevolution, dirA, dirB);
+
 int buttonPin = 2;//liest Button ein
-bool buttonPressed_before = false;//status des Buttons
-bool buttonPressed_now = false;
 int fanPin = 4;//steuert Lüfter
- 
- 
+
+
 void setup() {
   //Initialisieren aller Pins
   pinMode(tempControl, OUTPUT);
-  pinMode(pwmPin, OUTPUT);
-  pinMode(directionPin, OUTPUT);
   pinMode(fanPin, OUTPUT);
   pinMode(buttonPin, INPUT_PULLUP);//Pullup-Wiederstand für den Button
- 
+
   Serial.begin(9600);//initialisiert serial monitor
- 
+
   //Einstellung des Displays, siehe library
   seg.begin();
   Wire.setClock(100000);
   seg.displayOn();
   seg.setDigits(4);
   seg.displayColon(false);
- 
+
+  //Initialisierung der Motor-Pins
+  pinMode(pwmA, OUTPUT);
+  pinMode(pwmB, OUTPUT);
+  pinMode(brakeA, OUTPUT);
+  pinMode(brakeB, OUTPUT);
+
+  digitalWrite(pwmA, HIGH);
+  digitalWrite(pwmB, HIGH);
+  digitalWrite(brakeA, LOW);
+  digitalWrite(brakeB, LOW);
+
+  // Motorgeschwindigkeit (RPM)
+  myStepper.setSpeed(60);
+
+
 }
- 
- 
- 
+
+
+
 void loop() {
- 
+
   int temp = analogRead(tempSens);//Wert des Temperatursensors (nicht echte Temperatur)
- 
+  
   //Motorgeschwindigkeit abhängig von der Temperatur, wobei ein Schwellenwert erreicht werden muss (sonst speed = 0)
-  if(temp >= minTemp){
-    speed = temp/10 + 20;
+  myStepper.step(1);
+
+  unsigned long currentMillis = millis();
+  if((currentMillis-previousMillis) >= refreshRate){
+    previousMillis = currentMillis;
+
+    Serial.println(temp);//gibt temp auf serial monitor aus
+    seg.displayInt(temp);//gibt temp auf display aus
   }
-  else{
-    speed = 0;
-  }
- 
- 
-  Serial.println(temp);//gibt temp auf serial monitor aus
-  seg.displayInt(temp);//gibt temp auf display aus
-  delay(300);
- 
-  //Stellt den Motor mit speed und der Richtung ein
-  digitalWrite(directionPin, HIGH);
-  analogWrite(pwmPin, speed);
- 
+
+
+
   //Heatblock heizt so lange, mis maxTemp erreicht ist (und heizt wieder, wenn es unterschritten wird)
   if(temp <= maxTemp){
     digitalWrite(tempControl, HIGH);
@@ -84,7 +105,7 @@ void loop() {
   else{
     digitalWrite(tempControl, LOW);
   }
- 
+
   //Auf Knopfdruck wird der Lüfter eingeschaltet
   //Die Zeit reichte leider nicht mehr, um einzustellen dass der Lüfter seinen momentanen Zustand bis zum nächsten Drücken beibehält
   if(digitalRead(buttonPin) == LOW){
@@ -93,5 +114,6 @@ void loop() {
   else{
     digitalWrite(fanPin, LOW);
   }
- 
+
 }
+
