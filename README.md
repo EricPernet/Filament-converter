@@ -35,7 +35,7 @@ WICHTIG: Das Projekt auf dem Bild stellt nur unsere Ausführung dar für ein Inf
 
 ## Codes fürs Modellieren und Arduino 
 
-Zum modellieren wurde ein CAD Programm namens OpenSCAD (https://openscad.org) genutzt, der Code zur gesamten Spule (siehe Bild oben) kann hier auf Github unter https://github.com/EricPernet/Filament-converter/blob/main/Spule%20OpenSCAD gefunden werden. Als Microcontroller wurde ein Arduino uno (https://www.arduino.cc) benutzt, der gesamte Code dazu kann ebenfalls auf Github unter __ gefunden werden. 
+Zum modellieren wurde ein CAD Programm namens OpenSCAD (https://openscad.org) genutzt, der Code zur gesamten Spule (siehe Bild oben) kann hier auf Github unter https://github.com/EricPernet/Filament-converter/blob/main/Spule%20OpenSCAD gefunden werden. Als Microcontroller wurde ein Arduino uno (https://www.arduino.cc) benutzt, der gesamte Code dazu kann ebenfalls auf Github unter https://github.com/EricPernet/Filament-converter/blob/main/Arduino%20PET%20to%20filament%20converter gefunden werden. 
 
 Für den OpenSCAD Code wird eine Library namens getriebe.scad benötigt, diese ist auf Thingiverse verfügbar: 
 
