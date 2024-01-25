@@ -31,7 +31,44 @@ Unten folgt ein Bild mit einer Legende für die Ausführung des Projekts von Efr
 **9. Breadboard:** Das Breadboard enthält die vollständige Elektronik, dieses ist jedoch nur temporär da und wird noch durch eine Platine ausgetauscht.
 
 
-//WICHTIG: Das Projekt auf dem Bild stellt nur unsere Ausführung dar für ein Informatikprojekt mit relativ wenig verfügbarer Zeit und Ressourcen. Das Projekt kann auch noch stetig verbessert werden und Ansätze zur Lösung von Problemen könnten auch anders sein.//
+WICHTIG: Das Projekt auf dem Bild stellt nur unsere Ausführung dar für ein Informatikprojekt mit relativ wenig verfügbarer Zeit und Ressourcen. Das Projekt kann auch noch stetig verbessert werden und Ansätze zur Lösung von Problemen könnten auch anders sein.
+
+## Codes fürs Modellieren und Arduino 
+
+Zum modellieren wurde ein CAD Programm namens OpenSCAD (https://openscad.org) genutzt, der Code zur gesamten Spule (siehe Bild oben) kann hier auf Github unter gefunden werden. Als Microcontroller wurde ein Arduino uno (https://www.arduino.cc) benutzt, der gesamte Code dazu kann ebenfalls auf Github unter __ gefunden werden. 
+
+Für den OpenSCAD Code wird eine Library namens getriebe.scad benötigt, diese ist auf Thingiverse verfügbar: 
+
+https://www.thingiverse.com/thing:1604369
+
+Für den Arduino Code wird ebenfalls eine Library benötigt:
+
+https://www.arduino.cc/reference/en/libraries/ht16k33/
+
+
+## Dokumentation zum Projekt
+
+Eine vollständige Dokumentation der Arbeitsschritte und ein Fazit von unserem persönlichen Projekt ist in diesem PDF Dokument enthalten: file:///C:/Users/eric/Downloads/diy_pet_flaschen_zu_filament_converter_efraim_und_eric.pdf
+
+
+## Teile, die im Projekt enthalten sind
+
+**Heatblock:**https://de.aliexpress.com/item/32902780945.html?spm=a2g0o.detail.1000014.22.68353f3etGCuNz&gps-id=pcDetailBottomMoreOtherSeller&scm=1007.40000.267768.0&scm_id=1007.40000.267768.0&scm-url=1007.40000.267768.0&pvid=10ce223b-449c-4e80-98b3-86e08aba30e1&_t=gps-id%3ApcDetailBottomMoreOtherSeller%2Cscm-url%3A1007.40000.267768.0%2Cpvid%3A10ce223b-449c-4e80-98b3-86e08aba30e1%2Ctpp_buckets%3A668%232846%238110%23322&pdp_ext_f=%7B
+
+**Nozzle:** https://de.aliexpress.com/item/1005005772823867.html?spm=a2g0o.productlist.main.1.46412130rM69h8&algo_pvid=9fbe4379-e494-4034-8c4c-f0dfec1b8216&algo_exp_id=9fbe4379-e494-4034-8c4c-f0dfec1b8216-0&pdp_npi=4%40dis%21CHF%213.60%210.44%21%21%2128.87%21%21%402103011217001396470721642e0df6%2112000034367533471%21sea%21CH%210%21AB&curPageLogUid=m0TIKRMCpsHY
+
+
+## Weitere Tutorials und Anleitungen zu verschiedenen Teilen des Projekts
+
+**Tutorial PET to Filament converter:** https://www.youtube.com/watch?v=ueJXQ7appC0
+
+**PET bottle cutter:** https://www.youtube.com/watch?v=QyOKVBeIQ5w
+
+
+
+
+
+
 
 
 
